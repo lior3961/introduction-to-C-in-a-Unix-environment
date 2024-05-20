@@ -1,15 +1,11 @@
-# Target to build the labA executable
-all: labAexec
+all: encoder
 
-# Rule to link the 'labA' executable
-labAexec: main.o
-	gcc -m32 -g -Wall -o labAexec main.o
+encoder: encoder.o
+	gcc -m32 -g -Wall -o encoder encoder.o
 
-# Rule to compile C source files into object files
-main.o: main.c
-	gcc -m32 -g -Wall -c -o main.o main.c
+encoder.o: encoder.c
+	gcc -m32 -g -Wall -c -o encoder.o encoder.c
 
-# Phony target to clean up object files and the executable
 .PHONY: clean
 clean:
-	rm -f *.o labAexec
+	rm -f *.o encoder

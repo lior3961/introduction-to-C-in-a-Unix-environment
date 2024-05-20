@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 int encode(int , int , char** , FILE* , FILE*);
-int main(int argc, char **argv) {
+int encoder(int argc, char **argv) {
   FILE * input = stdin;
   FILE * output = stdout;
   int plus; 
